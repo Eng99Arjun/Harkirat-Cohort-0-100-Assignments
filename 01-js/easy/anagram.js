@@ -1,3 +1,4 @@
+
 /*
   Write a function `isAnagram` which takes 2 parameters and returns true/false if those are anagrams or not.
   What's Anagram?
@@ -5,7 +6,7 @@
 */
 
 function isAnagram(str1, str2) {
-  const normalize = str => str.replace(/[^a-zA-Z]/g, '').toLowerCase();
+  const normalize = str => str.replace(/\s+/g, '').toLowerCase(); // Only remove spaces
   const sortedStr1 = normalize(str1).split('').sort().join(''); 
   const sortedStr2 = normalize(str2).split('').sort().join(''); 
   
