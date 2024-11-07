@@ -5,7 +5,10 @@
 
 
 let counter = 0;
-setInterval(() => {
+function incrementCounter() {
     counter++;
     console.log(counter);
-}, 1000);
+    setTimeout(incrementCounter, 1000);
+}
+
+incrementCounter();
